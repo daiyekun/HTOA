@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "MxvSp9ta3lw=",
+  "success": true,
+  "projectFilePath": "D:\\woocodetest\\OpenCode\\CWHT\\backend\\src\\CWHT.OA.Application\\CWHT.OA.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.11.0\\fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\freesql\\3.5.200\\freesql.3.5.200.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\freesql.dbcontext\\3.5.200\\freesql.dbcontext.3.5.200.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\freesql.repository\\3.5.200\\freesql.repository.3.5.200.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.0\\microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

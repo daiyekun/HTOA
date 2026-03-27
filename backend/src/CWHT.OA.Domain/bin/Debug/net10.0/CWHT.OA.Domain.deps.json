@@ -1,0 +1,112 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "CWHT.OA.Domain/1.0.0": {
+        "dependencies": {
+          "FreeSql": "3.5.200",
+          "FreeSql.Repository": "3.5.200"
+        },
+        "runtime": {
+          "CWHT.OA.Domain.dll": {}
+        }
+      },
+      "FreeSql/3.5.200": {
+        "runtime": {
+          "lib/netstandard2.1/FreeSql.dll": {
+            "assemblyVersion": "3.5.200.0",
+            "fileVersion": "3.5.200.0"
+          }
+        }
+      },
+      "FreeSql.DbContext/3.5.200": {
+        "dependencies": {
+          "FreeSql": "3.5.200",
+          "Microsoft.Extensions.DependencyInjection": "9.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/FreeSql.DbContext.dll": {
+            "assemblyVersion": "3.5.200.0",
+            "fileVersion": "3.5.200.0"
+          }
+        }
+      },
+      "FreeSql.Repository/3.5.200": {
+        "dependencies": {
+          "FreeSql.DbContext": "3.5.200"
+        },
+        "runtime": {
+          "lib/net9.0/FreeSql.Repository.dll": {
+            "assemblyVersion": "3.5.200.0",
+            "fileVersion": "3.5.200.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/9.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.0": {
+        "runtime": {
+          "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CWHT.OA.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FreeSql/3.5.200": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MMk18pmCsm48JVVJM6JoNULk4gKXlrG3c1qXP9XViT+97QcYVi59ED+gcDbyZiV3PPLpAwPExgz1E59HLA+Z0w==",
+      "path": "freesql/3.5.200",
+      "hashPath": "freesql.3.5.200.nupkg.sha512"
+    },
+    "FreeSql.DbContext/3.5.200": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Qhjo5o/XRVpkR8vG5SD+d/p8NcGoTDnOIjvpuXsIDbz4Mxu0AUwO18z+3anSx7a0/iHMn11HjPaFTy+KYxt08w==",
+      "path": "freesql.dbcontext/3.5.200",
+      "hashPath": "freesql.dbcontext.3.5.200.nupkg.sha512"
+    },
+    "FreeSql.Repository/3.5.200": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NJPSd09SBAkhl8COaJq2rs+sY3mqoGeJO+4ybxUJdRuLkxLM+NIvscWKhMipOIqRzscH5J2oZy7URCmok9/Cuw==",
+      "path": "freesql.repository/3.5.200",
+      "hashPath": "freesql.repository.3.5.200.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MCPrg7v3QgNMr0vX4vzRXvkNGgLg8vKWX0nKCWUxu2uPyMsaRgiRc1tHBnbTcfJMhMKj2slE/j2M9oGkd25DNw==",
+      "path": "microsoft.extensions.dependencyinjection/9.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+6f2qv2a3dLwd5w6JanPIPs47CxRbnk+ZocMJUhv9NxP88VlOcJYZs9jY+MYSjxvady08bUZn6qgiNh7DadGgg==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/9.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
+    }
+  }
+}
