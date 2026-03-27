@@ -1,0 +1,226 @@
+2026-03-27 21:30:53.894 +08:00 [INF] SQL:  SELECT 1
+2026-03-27 21:30:54.094 +08:00 [INF] Database connection successful!
+2026-03-27 21:30:54.094 +08:00 [INF] Starting CWHT OA API...
+2026-03-27 21:30:54.104 +08:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-27 21:30:54.135 +08:00 [INF] Now listening on: http://localhost:5000
+2026-03-27 21:30:54.136 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-27 21:30:54.136 +08:00 [INF] Hosting environment: Production
+2026-03-27 21:30:54.137 +08:00 [INF] Content root path: D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.WebAPI
+2026-03-27 21:32:00.977 +08:00 [INF] SQL:  SELECT 1
+2026-03-27 21:32:01.182 +08:00 [INF] Database connection successful!
+2026-03-27 21:32:01.182 +08:00 [INF] Starting CWHT OA API...
+2026-03-27 21:32:01.193 +08:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-27 21:32:01.223 +08:00 [INF] Now listening on: http://localhost:5000
+2026-03-27 21:32:01.224 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-27 21:32:01.224 +08:00 [INF] Hosting environment: Production
+2026-03-27 21:32:01.224 +08:00 [INF] Content root path: D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.WebAPI
+2026-03-27 21:33:12.151 +08:00 [INF] SQL:  SELECT 1
+2026-03-27 21:33:12.355 +08:00 [INF] Database connection successful!
+2026-03-27 21:33:12.355 +08:00 [INF] Starting CWHT OA API...
+2026-03-27 21:33:12.365 +08:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-27 21:33:12.395 +08:00 [INF] Now listening on: http://localhost:5000
+2026-03-27 21:33:12.396 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-27 21:33:12.396 +08:00 [INF] Hosting environment: Production
+2026-03-27 21:33:12.396 +08:00 [INF] Content root path: D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.WebAPI
+2026-03-27 21:33:27.227 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 42
+2026-03-27 21:33:28.210 +08:00 [INF] Executing endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-27 21:33:28.226 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[CWHT.OA.Application.DTOs.ApiResponse`1[CWHT.OA.Application.DTOs.Auth.LoginOutput]] Login(CWHT.OA.Application.DTOs.Auth.LoginInput) on controller CWHT.OA.WebAPI.Controllers.AuthController (CWHT.OA.WebAPI).
+2026-03-27 21:33:28.402 +08:00 [INF] SQL: SELECT a."Id", a."Username", a."Password", a."Salt", a."RealName", a."Phone", a."Email", a."Avatar", a."Gender", a."Status", a."DepartmentId", a."PositionId", a."IsAdmin", a."LastLoginTime", a."LastLoginIp", a."CreateTime", a."UpdateTime", a."CreateBy", a."UpdateBy", a."IsDeleted", 
+a__Department."Id" as21, a__Department."Name", a__Department."ParentId", a__Department."Ancestors", a__Department."Sort", a__Department."Leader", a__Department."Phone" as27, a__Department."Email" as28, a__Department."Status" as29, a__Department."CreateTime" as30, a__Department."UpdateTime" as31 
+FROM "sys_user" a 
+LEFT JOIN "sys_department" a__Department ON a__Department."Id" = a."DepartmentId" 
+WHERE (a."Username" = 'admin' AND a."IsDeleted" = 0) 
+limit 1
+2026-03-27 21:33:28.440 +08:00 [INF] SQL: SELECT a."Id", a."UserId", a."RoleId", 
+a__Role."Id" as4, a__Role."Name", a__Role."Code", a__Role."Sort", a__Role."DataScope", a__Role."Status", a__Role."Remark", a__Role."CreateTime", a__Role."UpdateTime" 
+FROM "sys_user_role" a 
+LEFT JOIN "sys_role" a__Role ON a__Role."Id" = a."RoleId" 
+WHERE (a."UserId" = 1)
+2026-03-27 21:33:28.500 +08:00 [INF] SQL: UPDATE "sys_user" SET "LastLoginTime" = @p_0 
+WHERE ("Id" = 1)
+2026-03-27 21:33:28.507 +08:00 [INF] Executing ObjectResult, writing value of type 'CWHT.OA.Application.DTOs.ApiResponse`1[[CWHT.OA.Application.DTOs.Auth.LoginOutput, CWHT.OA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-27 21:33:28.520 +08:00 [INF] Executed action CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI) in 292.7077ms
+2026-03-27 21:33:28.525 +08:00 [INF] Executed endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-27 21:33:28.527 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 1301.09ms
+2026-03-27 21:34:39.609 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-03-27 21:34:39.611 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 0 null 2.0585ms
+2026-03-27 21:34:39.612 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404
+2026-03-27 21:34:47.026 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-03-27 21:34:47.028 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 0 null 1.9341ms
+2026-03-27 21:34:47.029 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404
+2026-03-27 21:35:40.161 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 42
+2026-03-27 21:35:40.163 +08:00 [INF] Executing endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-27 21:35:40.163 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[CWHT.OA.Application.DTOs.ApiResponse`1[CWHT.OA.Application.DTOs.Auth.LoginOutput]] Login(CWHT.OA.Application.DTOs.Auth.LoginInput) on controller CWHT.OA.WebAPI.Controllers.AuthController (CWHT.OA.WebAPI).
+2026-03-27 21:35:40.165 +08:00 [INF] SQL: SELECT a."Id", a."Username", a."Password", a."Salt", a."RealName", a."Phone", a."Email", a."Avatar", a."Gender", a."Status", a."DepartmentId", a."PositionId", a."IsAdmin", a."LastLoginTime", a."LastLoginIp", a."CreateTime", a."UpdateTime", a."CreateBy", a."UpdateBy", a."IsDeleted", 
+a__Department."Id" as21, a__Department."Name", a__Department."ParentId", a__Department."Ancestors", a__Department."Sort", a__Department."Leader", a__Department."Phone" as27, a__Department."Email" as28, a__Department."Status" as29, a__Department."CreateTime" as30, a__Department."UpdateTime" as31 
+FROM "sys_user" a 
+LEFT JOIN "sys_department" a__Department ON a__Department."Id" = a."DepartmentId" 
+WHERE (a."Username" = 'admin' AND a."IsDeleted" = 0) 
+limit 1
+2026-03-27 21:35:40.167 +08:00 [INF] SQL: SELECT a."Id", a."UserId", a."RoleId", 
+a__Role."Id" as4, a__Role."Name", a__Role."Code", a__Role."Sort", a__Role."DataScope", a__Role."Status", a__Role."Remark", a__Role."CreateTime", a__Role."UpdateTime" 
+FROM "sys_user_role" a 
+LEFT JOIN "sys_role" a__Role ON a__Role."Id" = a."RoleId" 
+WHERE (a."UserId" = 1)
+2026-03-27 21:35:40.168 +08:00 [INF] SQL: UPDATE "sys_user" SET "LastLoginTime" = @p_0 
+WHERE ("Id" = 1)
+2026-03-27 21:35:40.169 +08:00 [INF] Executing ObjectResult, writing value of type 'CWHT.OA.Application.DTOs.ApiResponse`1[[CWHT.OA.Application.DTOs.Auth.LoginOutput, CWHT.OA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-27 21:35:40.170 +08:00 [INF] Executed action CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI) in 6.442ms
+2026-03-27 21:35:40.170 +08:00 [INF] Executed endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-27 21:35:40.170 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 8.5179ms
+2026-03-27 21:36:44.351 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/api/auth/login - application/json 42
+2026-03-27 21:36:44.353 +08:00 [INF] CORS policy execution successful.
+2026-03-27 21:36:44.355 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/api/auth/login - 404 0 null 4.3378ms
+2026-03-27 21:36:44.355 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/api/api/auth/login, Response status code: 404
+2026-03-27 21:37:28.067 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 42
+2026-03-27 21:37:28.067 +08:00 [INF] Executing endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-27 21:37:28.067 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[CWHT.OA.Application.DTOs.ApiResponse`1[CWHT.OA.Application.DTOs.Auth.LoginOutput]] Login(CWHT.OA.Application.DTOs.Auth.LoginInput) on controller CWHT.OA.WebAPI.Controllers.AuthController (CWHT.OA.WebAPI).
+2026-03-27 21:37:28.068 +08:00 [INF] SQL: SELECT a."Id", a."Username", a."Password", a."Salt", a."RealName", a."Phone", a."Email", a."Avatar", a."Gender", a."Status", a."DepartmentId", a."PositionId", a."IsAdmin", a."LastLoginTime", a."LastLoginIp", a."CreateTime", a."UpdateTime", a."CreateBy", a."UpdateBy", a."IsDeleted", 
+a__Department."Id" as21, a__Department."Name", a__Department."ParentId", a__Department."Ancestors", a__Department."Sort", a__Department."Leader", a__Department."Phone" as27, a__Department."Email" as28, a__Department."Status" as29, a__Department."CreateTime" as30, a__Department."UpdateTime" as31 
+FROM "sys_user" a 
+LEFT JOIN "sys_department" a__Department ON a__Department."Id" = a."DepartmentId" 
+WHERE (a."Username" = 'admin' AND a."IsDeleted" = 0) 
+limit 1
+2026-03-27 21:37:28.069 +08:00 [INF] SQL: SELECT a."Id", a."UserId", a."RoleId", 
+a__Role."Id" as4, a__Role."Name", a__Role."Code", a__Role."Sort", a__Role."DataScope", a__Role."Status", a__Role."Remark", a__Role."CreateTime", a__Role."UpdateTime" 
+FROM "sys_user_role" a 
+LEFT JOIN "sys_role" a__Role ON a__Role."Id" = a."RoleId" 
+WHERE (a."UserId" = 1)
+2026-03-27 21:37:28.071 +08:00 [INF] SQL: UPDATE "sys_user" SET "LastLoginTime" = @p_0 
+WHERE ("Id" = 1)
+2026-03-27 21:37:28.072 +08:00 [INF] Executing ObjectResult, writing value of type 'CWHT.OA.Application.DTOs.ApiResponse`1[[CWHT.OA.Application.DTOs.Auth.LoginOutput, CWHT.OA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-27 21:37:28.072 +08:00 [INF] Executed action CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI) in 4.7376ms
+2026-03-27 21:37:28.072 +08:00 [INF] Executed endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-27 21:37:28.072 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 5.186ms
+2026-03-27 21:38:24.687 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/api/auth/login - application/json 42
+2026-03-27 21:38:24.687 +08:00 [INF] CORS policy execution successful.
+2026-03-27 21:38:24.687 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/api/auth/login - 404 0 null 0.7164ms
+2026-03-27 21:38:24.687 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/api/api/auth/login, Response status code: 404
+2026-03-27 21:44:23.496 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/api/auth/login - application/json 42
+2026-03-27 21:44:23.496 +08:00 [INF] CORS policy execution successful.
+2026-03-27 21:44:23.496 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/api/auth/login - 404 0 null 0.475ms
+2026-03-27 21:44:23.496 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/api/api/auth/login, Response status code: 404
+2026-03-27 21:44:28.009 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/api/auth/login - application/json 42
+2026-03-27 21:44:28.009 +08:00 [INF] CORS policy execution successful.
+2026-03-27 21:44:28.009 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/api/auth/login - 404 0 null 0.3147ms
+2026-03-27 21:44:28.009 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/api/api/auth/login, Response status code: 404
+2026-03-27 21:49:59.301 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/login - null null
+2026-03-27 21:49:59.301 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/login - 404 0 null 0.378ms
+2026-03-27 21:49:59.301 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/login, Response status code: 404
+2026-03-27 21:49:59.303 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/login - null null
+2026-03-27 21:49:59.303 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/login - 404 0 null 0.1729ms
+2026-03-27 21:49:59.303 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/login, Response status code: 404
+2026-03-27 21:50:15.764 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/auth/login - application/json 42
+2026-03-27 21:50:15.765 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/auth/login - 404 0 null 0.183ms
+2026-03-27 21:50:15.765 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/auth/login, Response status code: 404
+2026-03-27 21:50:57.365 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/login - null null
+2026-03-27 21:50:57.365 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/login - 404 0 null 0.2217ms
+2026-03-27 21:50:57.365 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/login, Response status code: 404
+2026-03-27 21:51:01.107 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/login - null null
+2026-03-27 21:51:01.107 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/login - 404 0 null 0.1789ms
+2026-03-27 21:51:01.107 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/login, Response status code: 404
+2026-03-27 21:52:08.740 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2026-03-27 21:52:08.740 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 404 0 null 0.2748ms
+2026-03-27 21:52:08.741 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/, Response status code: 404
+2026-03-27 21:52:13.609 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000// - null null
+2026-03-27 21:52:13.609 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000// - 404 0 null 0.2397ms
+2026-03-27 21:52:13.610 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000//, Response status code: 404
+2026-03-27 21:54:17.851 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 42
+2026-03-27 21:54:17.852 +08:00 [INF] Executing endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-27 21:54:17.852 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[CWHT.OA.Application.DTOs.ApiResponse`1[CWHT.OA.Application.DTOs.Auth.LoginOutput]] Login(CWHT.OA.Application.DTOs.Auth.LoginInput) on controller CWHT.OA.WebAPI.Controllers.AuthController (CWHT.OA.WebAPI).
+2026-03-27 21:54:17.853 +08:00 [INF] SQL: SELECT a."Id", a."Username", a."Password", a."Salt", a."RealName", a."Phone", a."Email", a."Avatar", a."Gender", a."Status", a."DepartmentId", a."PositionId", a."IsAdmin", a."LastLoginTime", a."LastLoginIp", a."CreateTime", a."UpdateTime", a."CreateBy", a."UpdateBy", a."IsDeleted", 
+a__Department."Id" as21, a__Department."Name", a__Department."ParentId", a__Department."Ancestors", a__Department."Sort", a__Department."Leader", a__Department."Phone" as27, a__Department."Email" as28, a__Department."Status" as29, a__Department."CreateTime" as30, a__Department."UpdateTime" as31 
+FROM "sys_user" a 
+LEFT JOIN "sys_department" a__Department ON a__Department."Id" = a."DepartmentId" 
+WHERE (a."Username" = 'admin' AND a."IsDeleted" = 0) 
+limit 1
+2026-03-27 21:54:17.855 +08:00 [INF] SQL: SELECT a."Id", a."UserId", a."RoleId", 
+a__Role."Id" as4, a__Role."Name", a__Role."Code", a__Role."Sort", a__Role."DataScope", a__Role."Status", a__Role."Remark", a__Role."CreateTime", a__Role."UpdateTime" 
+FROM "sys_user_role" a 
+LEFT JOIN "sys_role" a__Role ON a__Role."Id" = a."RoleId" 
+WHERE (a."UserId" = 1)
+2026-03-27 21:54:17.856 +08:00 [INF] SQL: UPDATE "sys_user" SET "LastLoginTime" = @p_0 
+WHERE ("Id" = 1)
+2026-03-27 21:54:17.857 +08:00 [INF] Executing ObjectResult, writing value of type 'CWHT.OA.Application.DTOs.ApiResponse`1[[CWHT.OA.Application.DTOs.Auth.LoginOutput, CWHT.OA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-27 21:54:17.858 +08:00 [INF] Executed action CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI) in 5.4525ms
+2026-03-27 21:54:17.858 +08:00 [INF] Executed endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-27 21:54:17.858 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 6.3404ms
+2026-03-27 21:54:48.106 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 42
+2026-03-27 21:54:48.106 +08:00 [INF] CORS policy execution successful.
+2026-03-27 21:54:48.106 +08:00 [INF] Executing endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-27 21:54:48.106 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[CWHT.OA.Application.DTOs.ApiResponse`1[CWHT.OA.Application.DTOs.Auth.LoginOutput]] Login(CWHT.OA.Application.DTOs.Auth.LoginInput) on controller CWHT.OA.WebAPI.Controllers.AuthController (CWHT.OA.WebAPI).
+2026-03-27 21:54:48.107 +08:00 [INF] SQL: SELECT a."Id", a."Username", a."Password", a."Salt", a."RealName", a."Phone", a."Email", a."Avatar", a."Gender", a."Status", a."DepartmentId", a."PositionId", a."IsAdmin", a."LastLoginTime", a."LastLoginIp", a."CreateTime", a."UpdateTime", a."CreateBy", a."UpdateBy", a."IsDeleted", 
+a__Department."Id" as21, a__Department."Name", a__Department."ParentId", a__Department."Ancestors", a__Department."Sort", a__Department."Leader", a__Department."Phone" as27, a__Department."Email" as28, a__Department."Status" as29, a__Department."CreateTime" as30, a__Department."UpdateTime" as31 
+FROM "sys_user" a 
+LEFT JOIN "sys_department" a__Department ON a__Department."Id" = a."DepartmentId" 
+WHERE (a."Username" = 'admin' AND a."IsDeleted" = 0) 
+limit 1
+2026-03-27 21:54:48.109 +08:00 [INF] SQL: SELECT a."Id", a."UserId", a."RoleId", 
+a__Role."Id" as4, a__Role."Name", a__Role."Code", a__Role."Sort", a__Role."DataScope", a__Role."Status", a__Role."Remark", a__Role."CreateTime", a__Role."UpdateTime" 
+FROM "sys_user_role" a 
+LEFT JOIN "sys_role" a__Role ON a__Role."Id" = a."RoleId" 
+WHERE (a."UserId" = 1)
+2026-03-27 21:54:48.112 +08:00 [INF] SQL: UPDATE "sys_user" SET "LastLoginTime" = @p_0 
+WHERE ("Id" = 1)
+2026-03-27 21:54:48.114 +08:00 [INF] Executing ObjectResult, writing value of type 'CWHT.OA.Application.DTOs.ApiResponse`1[[CWHT.OA.Application.DTOs.Auth.LoginOutput, CWHT.OA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-27 21:54:48.115 +08:00 [INF] Executed action CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI) in 8.4512ms
+2026-03-27 21:54:48.115 +08:00 [INF] Executed endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-27 21:54:48.115 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 8.8685ms
+2026-03-27 22:23:02.685 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 42
+2026-03-27 22:23:02.685 +08:00 [INF] CORS policy execution successful.
+2026-03-27 22:23:02.703 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-27 22:23:02.711 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-27 22:23:02.711 +08:00 [INF] Executing endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-27 22:23:02.711 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[CWHT.OA.Application.DTOs.ApiResponse`1[CWHT.OA.Application.DTOs.Auth.LoginOutput]] Login(CWHT.OA.Application.DTOs.Auth.LoginInput) on controller CWHT.OA.WebAPI.Controllers.AuthController (CWHT.OA.WebAPI).
+2026-03-27 22:23:02.712 +08:00 [INF] SQL: SELECT a."Id", a."Username", a."Password", a."Salt", a."RealName", a."Phone", a."Email", a."Avatar", a."Gender", a."Status", a."DepartmentId", a."PositionId", a."IsAdmin", a."LastLoginTime", a."LastLoginIp", a."CreateTime", a."UpdateTime", a."CreateBy", a."UpdateBy", a."IsDeleted", 
+a__Department."Id" as21, a__Department."Name", a__Department."ParentId", a__Department."Ancestors", a__Department."Sort", a__Department."Leader", a__Department."Phone" as27, a__Department."Email" as28, a__Department."Status" as29, a__Department."CreateTime" as30, a__Department."UpdateTime" as31 
+FROM "sys_user" a 
+LEFT JOIN "sys_department" a__Department ON a__Department."Id" = a."DepartmentId" 
+WHERE (a."Username" = 'admin' AND a."IsDeleted" = 0) 
+limit 1
+2026-03-27 22:23:02.714 +08:00 [INF] SQL: SELECT a."Id", a."UserId", a."RoleId", 
+a__Role."Id" as4, a__Role."Name", a__Role."Code", a__Role."Sort", a__Role."DataScope", a__Role."Status", a__Role."Remark", a__Role."CreateTime", a__Role."UpdateTime" 
+FROM "sys_user_role" a 
+LEFT JOIN "sys_role" a__Role ON a__Role."Id" = a."RoleId" 
+WHERE (a."UserId" = 1)
+2026-03-27 22:23:02.715 +08:00 [INF] SQL: UPDATE "sys_user" SET "LastLoginTime" = @p_0 
+WHERE ("Id" = 1)
+2026-03-27 22:23:02.717 +08:00 [INF] Executing ObjectResult, writing value of type 'CWHT.OA.Application.DTOs.ApiResponse`1[[CWHT.OA.Application.DTOs.Auth.LoginOutput, CWHT.OA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-27 22:23:02.717 +08:00 [INF] Executed action CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI) in 5.7441ms
+2026-03-27 22:23:02.717 +08:00 [INF] Executed endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-27 22:23:02.717 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 32.0727ms
+2026-03-27 22:39:37.674 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 42
+2026-03-27 22:39:37.674 +08:00 [INF] CORS policy execution successful.
+2026-03-27 22:39:37.674 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-27 22:39:37.674 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-27 22:39:37.674 +08:00 [INF] Executing endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-27 22:39:37.675 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[CWHT.OA.Application.DTOs.ApiResponse`1[CWHT.OA.Application.DTOs.Auth.LoginOutput]] Login(CWHT.OA.Application.DTOs.Auth.LoginInput) on controller CWHT.OA.WebAPI.Controllers.AuthController (CWHT.OA.WebAPI).
+2026-03-27 22:39:37.675 +08:00 [INF] SQL: SELECT a."Id", a."Username", a."Password", a."Salt", a."RealName", a."Phone", a."Email", a."Avatar", a."Gender", a."Status", a."DepartmentId", a."PositionId", a."IsAdmin", a."LastLoginTime", a."LastLoginIp", a."CreateTime", a."UpdateTime", a."CreateBy", a."UpdateBy", a."IsDeleted", 
+a__Department."Id" as21, a__Department."Name", a__Department."ParentId", a__Department."Ancestors", a__Department."Sort", a__Department."Leader", a__Department."Phone" as27, a__Department."Email" as28, a__Department."Status" as29, a__Department."CreateTime" as30, a__Department."UpdateTime" as31 
+FROM "sys_user" a 
+LEFT JOIN "sys_department" a__Department ON a__Department."Id" = a."DepartmentId" 
+WHERE (a."Username" = 'admin' AND a."IsDeleted" = 0) 
+limit 1
+2026-03-27 22:39:37.677 +08:00 [INF] SQL: SELECT a."Id", a."UserId", a."RoleId", 
+a__Role."Id" as4, a__Role."Name", a__Role."Code", a__Role."Sort", a__Role."DataScope", a__Role."Status", a__Role."Remark", a__Role."CreateTime", a__Role."UpdateTime" 
+FROM "sys_user_role" a 
+LEFT JOIN "sys_role" a__Role ON a__Role."Id" = a."RoleId" 
+WHERE (a."UserId" = 1)
+2026-03-27 22:39:37.679 +08:00 [INF] SQL: UPDATE "sys_user" SET "LastLoginTime" = @p_0 
+WHERE ("Id" = 1)
+2026-03-27 22:39:37.680 +08:00 [INF] Executing ObjectResult, writing value of type 'CWHT.OA.Application.DTOs.ApiResponse`1[[CWHT.OA.Application.DTOs.Auth.LoginOutput, CWHT.OA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-27 22:39:37.680 +08:00 [INF] Executed action CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI) in 5.6564ms
+2026-03-27 22:39:37.680 +08:00 [INF] Executed endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-27 22:39:37.680 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 6.6471ms

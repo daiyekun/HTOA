@@ -1,0 +1,12 @@
+D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Domain\obj\Debug\net10.0\CWHT.OA.Domain.csproj.AssemblyReference.cache
+D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Domain\obj\Debug\net10.0\CWHT.OA.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Domain\obj\Debug\net10.0\CWHT.OA.Domain.AssemblyInfoInputs.cache
+D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Domain\obj\Debug\net10.0\CWHT.OA.Domain.AssemblyInfo.cs
+D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Domain\obj\Debug\net10.0\CWHT.OA.Domain.csproj.CoreCompileInputs.cache
+D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Domain\bin\Debug\net10.0\CWHT.OA.Domain.deps.json
+D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Domain\bin\Debug\net10.0\CWHT.OA.Domain.dll
+D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Domain\bin\Debug\net10.0\CWHT.OA.Domain.pdb
+D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Domain\obj\Debug\net10.0\CWHT.OA.Domain.dll
+D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Domain\obj\Debug\net10.0\refint\CWHT.OA.Domain.dll
+D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Domain\obj\Debug\net10.0\CWHT.OA.Domain.pdb
+D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Domain\obj\Debug\net10.0\ref\CWHT.OA.Domain.dll
