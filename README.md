@@ -18,7 +18,7 @@
 
 ## 系统概述
 
-CWHT OA 系统是一套功能完善的企业办公自动化平台，参考致远互联 A8 和泛微 e-cology 设计理念打造。系统采用前后端分离架构，后端基于 .NET 10 框架，采用 DDD（领域驱动设计）架构模式，前端使用 Vue 3 + TypeScript + Ant Design Vue 4。
+CWHT OA 系统是一套功能完善的企业办公自动化平台，参考一些OA设计理念打造。系统采用前后端分离架构，后端基于 .NET 10 框架，采用 DDD（领域驱动设计）架构模式，前端使用 Vue 3 + TypeScript + Ant Design Vue 4。
 
 ### 技术架构
 
