@@ -77,3 +77,4 @@ D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.WebAPI\obj\Debug\net10.0\refint
 D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.WebAPI\obj\Debug\net10.0\CWHT.OA.WebAPI.pdb
 D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.WebAPI\obj\Debug\net10.0\CWHT.OA.WebAPI.genruntimeconfig.cache
 D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.WebAPI\obj\Debug\net10.0\ref\CWHT.OA.WebAPI.dll
+D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.WebAPI\obj\Debug\net10.0\CWHT.OA.WebAPI.sourcelink.json

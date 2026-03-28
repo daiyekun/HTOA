@@ -15,3 +15,4 @@ D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Infrastructure\obj\Debug\net10.
 D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Infrastructure\obj\Debug\net10.0\refint\CWHT.OA.Infrastructure.dll
 D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Infrastructure\obj\Debug\net10.0\CWHT.OA.Infrastructure.pdb
 D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Infrastructure\obj\Debug\net10.0\ref\CWHT.OA.Infrastructure.dll
+D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.Infrastructure\obj\Debug\net10.0\CWHT.OA.Infrastructure.sourcelink.json

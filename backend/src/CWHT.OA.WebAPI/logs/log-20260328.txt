@@ -1,0 +1,323 @@
+2026-03-28 09:18:33.011 +08:00 [INF] SQL:  SELECT 1
+2026-03-28 09:18:33.268 +08:00 [INF] Database connection successful!
+2026-03-28 09:18:33.269 +08:00 [INF] Starting CWHT OA API...
+2026-03-28 09:18:33.279 +08:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-28 09:18:33.420 +08:00 [INF] Now listening on: http://0.0.0.0:5000
+2026-03-28 09:18:33.421 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-28 09:18:33.421 +08:00 [INF] Hosting environment: Production
+2026-03-28 09:18:33.421 +08:00 [INF] Content root path: D:\woocodetest\OpenCode\CWHT\backend\src\CWHT.OA.WebAPI
+2026-03-28 09:18:42.342 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 42
+2026-03-28 09:18:43.238 +08:00 [INF] Executing endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-28 09:18:43.253 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[CWHT.OA.Application.DTOs.ApiResponse`1[CWHT.OA.Application.DTOs.Auth.LoginOutput]] Login(CWHT.OA.Application.DTOs.Auth.LoginInput) on controller CWHT.OA.WebAPI.Controllers.AuthController (CWHT.OA.WebAPI).
+2026-03-28 09:18:43.419 +08:00 [INF] SQL: SELECT a."Id", a."Username", a."Password", a."Salt", a."RealName", a."Phone", a."Email", a."Avatar", a."Gender", a."Status", a."DepartmentId", a."PositionId", a."IsAdmin", a."LastLoginTime", a."LastLoginIp", a."CreateTime", a."UpdateTime", a."CreateBy", a."UpdateBy", a."IsDeleted", 
+a__Department."Id" as21, a__Department."Name", a__Department."ParentId", a__Department."Ancestors", a__Department."Sort", a__Department."Leader", a__Department."Phone" as27, a__Department."Email" as28, a__Department."Status" as29, a__Department."CreateTime" as30, a__Department."UpdateTime" as31 
+FROM "sys_user" a 
+LEFT JOIN "sys_department" a__Department ON a__Department."Id" = a."DepartmentId" 
+WHERE (a."Username" = 'admin' AND a."IsDeleted" = 0) 
+limit 1
+2026-03-28 09:18:43.457 +08:00 [INF] SQL: SELECT a."Id", a."UserId", a."RoleId", 
+a__Role."Id" as4, a__Role."Name", a__Role."Code", a__Role."Sort", a__Role."DataScope", a__Role."Status", a__Role."Remark", a__Role."CreateTime", a__Role."UpdateTime" 
+FROM "sys_user_role" a 
+LEFT JOIN "sys_role" a__Role ON a__Role."Id" = a."RoleId" 
+WHERE (a."UserId" = 1)
+2026-03-28 09:18:43.509 +08:00 [INF] SQL: UPDATE "sys_user" SET "LastLoginTime" = @p_0 
+WHERE ("Id" = 1)
+2026-03-28 09:18:43.519 +08:00 [INF] Executing ObjectResult, writing value of type 'CWHT.OA.Application.DTOs.ApiResponse`1[[CWHT.OA.Application.DTOs.Auth.LoginOutput, CWHT.OA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-28 09:18:43.531 +08:00 [INF] Executed action CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI) in 276.2524ms
+2026-03-28 09:18:43.536 +08:00 [INF] Executed endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-28 09:18:43.537 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 1195.2868ms
+2026-03-28 09:19:18.778 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 42
+2026-03-28 09:19:18.781 +08:00 [INF] CORS policy execution successful.
+2026-03-28 09:19:18.798 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-28 09:19:18.806 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-28 09:19:18.806 +08:00 [INF] Executing endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-28 09:19:18.806 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[CWHT.OA.Application.DTOs.ApiResponse`1[CWHT.OA.Application.DTOs.Auth.LoginOutput]] Login(CWHT.OA.Application.DTOs.Auth.LoginInput) on controller CWHT.OA.WebAPI.Controllers.AuthController (CWHT.OA.WebAPI).
+2026-03-28 09:19:18.808 +08:00 [INF] SQL: SELECT a."Id", a."Username", a."Password", a."Salt", a."RealName", a."Phone", a."Email", a."Avatar", a."Gender", a."Status", a."DepartmentId", a."PositionId", a."IsAdmin", a."LastLoginTime", a."LastLoginIp", a."CreateTime", a."UpdateTime", a."CreateBy", a."UpdateBy", a."IsDeleted", 
+a__Department."Id" as21, a__Department."Name", a__Department."ParentId", a__Department."Ancestors", a__Department."Sort", a__Department."Leader", a__Department."Phone" as27, a__Department."Email" as28, a__Department."Status" as29, a__Department."CreateTime" as30, a__Department."UpdateTime" as31 
+FROM "sys_user" a 
+LEFT JOIN "sys_department" a__Department ON a__Department."Id" = a."DepartmentId" 
+WHERE (a."Username" = 'admin' AND a."IsDeleted" = 0) 
+limit 1
+2026-03-28 09:19:18.811 +08:00 [INF] SQL: SELECT a."Id", a."UserId", a."RoleId", 
+a__Role."Id" as4, a__Role."Name", a__Role."Code", a__Role."Sort", a__Role."DataScope", a__Role."Status", a__Role."Remark", a__Role."CreateTime", a__Role."UpdateTime" 
+FROM "sys_user_role" a 
+LEFT JOIN "sys_role" a__Role ON a__Role."Id" = a."RoleId" 
+WHERE (a."UserId" = 1)
+2026-03-28 09:19:18.812 +08:00 [INF] SQL: UPDATE "sys_user" SET "LastLoginTime" = @p_0 
+WHERE ("Id" = 1)
+2026-03-28 09:19:18.815 +08:00 [INF] Executing ObjectResult, writing value of type 'CWHT.OA.Application.DTOs.ApiResponse`1[[CWHT.OA.Application.DTOs.Auth.LoginOutput, CWHT.OA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-28 09:19:18.816 +08:00 [INF] Executed action CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI) in 10.069ms
+2026-03-28 09:19:18.816 +08:00 [INF] Executed endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-28 09:19:18.817 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 38.9127ms
+2026-03-28 09:19:25.161 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/workflow/tasks/todo?page=1&pageSize=10 - null null
+2026-03-28 09:19:25.166 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-28 09:19:25.166 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-28 09:19:25.170 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-28 09:19:25.173 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-28 09:19:25.173 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/workflow/tasks/todo?page=1&pageSize=10 - 401 0 null 12.084ms
+2026-03-28 09:19:28.115 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/workflow/tasks/todo?page=1&pageSize=10 - null null
+2026-03-28 09:19:28.117 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-28 09:19:28.117 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-28 09:19:28.118 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-28 09:19:28.119 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-28 09:19:28.119 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/workflow/tasks/todo?page=1&pageSize=10 - 401 0 null 3.8577ms
+2026-03-28 09:19:36.892 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/workflow/definitions?page=1&pageSize=10&keyword= - null null
+2026-03-28 09:19:36.892 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-28 09:19:36.893 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-28 09:19:36.894 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-28 09:19:36.895 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-28 09:19:36.895 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/workflow/definitions?page=1&pageSize=10&keyword= - 401 0 null 2.7733ms
+2026-03-28 09:19:39.644 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/workflow/instances?page=1&pageSize=10&keyword= - null null
+2026-03-28 09:19:39.644 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-28 09:19:39.644 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-28 09:19:39.644 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-28 09:19:39.644 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-28 09:19:39.644 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/workflow/instances?page=1&pageSize=10&keyword= - 401 0 null 0.5363ms
+2026-03-28 09:19:43.747 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/workflow/definitions?page=1&pageSize=10&keyword= - null null
+2026-03-28 09:19:43.747 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-28 09:19:43.747 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-28 09:19:43.748 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-28 09:19:43.748 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-28 09:19:43.748 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/workflow/definitions?page=1&pageSize=10&keyword= - 401 0 null 0.6918ms
+2026-03-28 09:20:04.930 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/workflow/tasks/todo?page=1&pageSize=10 - null null
+2026-03-28 09:20:04.930 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-28 09:20:04.931 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-28 09:20:04.931 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-28 09:20:04.931 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-28 09:20:04.931 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/workflow/tasks/todo?page=1&pageSize=10 - 401 0 null 0.7841ms
+2026-03-28 09:21:12.599 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/workflow/definitions - application/json 1966
+2026-03-28 09:21:12.600 +08:00 [INF] CORS policy execution successful.
+2026-03-28 09:21:12.600 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-28 09:21:12.600 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-28 09:21:12.600 +08:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-03-28 09:21:12.600 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-03-28 09:21:12.622 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/workflow/definitions - 401 0 null 22.7045ms
+2026-03-28 09:22:30.566 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/user - null null
+2026-03-28 09:22:30.586 +08:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2026-03-28 09:22:30.586 +08:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2026-03-28 09:22:30.587 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/user - 405 0 null 20.8987ms
+2026-03-28 09:22:36.332 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 42
+2026-03-28 09:22:36.332 +08:00 [INF] Executing endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-28 09:22:36.332 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[CWHT.OA.Application.DTOs.ApiResponse`1[CWHT.OA.Application.DTOs.Auth.LoginOutput]] Login(CWHT.OA.Application.DTOs.Auth.LoginInput) on controller CWHT.OA.WebAPI.Controllers.AuthController (CWHT.OA.WebAPI).
+2026-03-28 09:22:36.333 +08:00 [INF] SQL: SELECT a."Id", a."Username", a."Password", a."Salt", a."RealName", a."Phone", a."Email", a."Avatar", a."Gender", a."Status", a."DepartmentId", a."PositionId", a."IsAdmin", a."LastLoginTime", a."LastLoginIp", a."CreateTime", a."UpdateTime", a."CreateBy", a."UpdateBy", a."IsDeleted", 
+a__Department."Id" as21, a__Department."Name", a__Department."ParentId", a__Department."Ancestors", a__Department."Sort", a__Department."Leader", a__Department."Phone" as27, a__Department."Email" as28, a__Department."Status" as29, a__Department."CreateTime" as30, a__Department."UpdateTime" as31 
+FROM "sys_user" a 
+LEFT JOIN "sys_department" a__Department ON a__Department."Id" = a."DepartmentId" 
+WHERE (a."Username" = 'admin' AND a."IsDeleted" = 0) 
+limit 1
+2026-03-28 09:22:36.335 +08:00 [INF] SQL: SELECT a."Id", a."UserId", a."RoleId", 
+a__Role."Id" as4, a__Role."Name", a__Role."Code", a__Role."Sort", a__Role."DataScope", a__Role."Status", a__Role."Remark", a__Role."CreateTime", a__Role."UpdateTime" 
+FROM "sys_user_role" a 
+LEFT JOIN "sys_role" a__Role ON a__Role."Id" = a."RoleId" 
+WHERE (a."UserId" = 1)
+2026-03-28 09:22:36.336 +08:00 [INF] SQL: UPDATE "sys_user" SET "LastLoginTime" = @p_0 
+WHERE ("Id" = 1)
+2026-03-28 09:22:36.337 +08:00 [INF] Executing ObjectResult, writing value of type 'CWHT.OA.Application.DTOs.ApiResponse`1[[CWHT.OA.Application.DTOs.Auth.LoginOutput, CWHT.OA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-28 09:22:36.337 +08:00 [INF] Executed action CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI) in 5.4961ms
+2026-03-28 09:22:36.338 +08:00 [INF] Executed endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-28 09:22:36.338 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 5.8513ms
+2026-03-28 09:22:36.579 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/user - null null
+2026-03-28 09:22:36.579 +08:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2026-03-28 09:22:36.580 +08:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2026-03-28 09:22:36.580 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/user - 405 0 null 0.4938ms
+2026-03-28 09:22:47.422 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 42
+2026-03-28 09:22:47.422 +08:00 [INF] Executing endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-28 09:22:47.422 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[CWHT.OA.Application.DTOs.ApiResponse`1[CWHT.OA.Application.DTOs.Auth.LoginOutput]] Login(CWHT.OA.Application.DTOs.Auth.LoginInput) on controller CWHT.OA.WebAPI.Controllers.AuthController (CWHT.OA.WebAPI).
+2026-03-28 09:22:47.423 +08:00 [INF] SQL: SELECT a."Id", a."Username", a."Password", a."Salt", a."RealName", a."Phone", a."Email", a."Avatar", a."Gender", a."Status", a."DepartmentId", a."PositionId", a."IsAdmin", a."LastLoginTime", a."LastLoginIp", a."CreateTime", a."UpdateTime", a."CreateBy", a."UpdateBy", a."IsDeleted", 
+a__Department."Id" as21, a__Department."Name", a__Department."ParentId", a__Department."Ancestors", a__Department."Sort", a__Department."Leader", a__Department."Phone" as27, a__Department."Email" as28, a__Department."Status" as29, a__Department."CreateTime" as30, a__Department."UpdateTime" as31 
+FROM "sys_user" a 
+LEFT JOIN "sys_department" a__Department ON a__Department."Id" = a."DepartmentId" 
+WHERE (a."Username" = 'admin' AND a."IsDeleted" = 0) 
+limit 1
+2026-03-28 09:22:47.425 +08:00 [INF] SQL: SELECT a."Id", a."UserId", a."RoleId", 
+a__Role."Id" as4, a__Role."Name", a__Role."Code", a__Role."Sort", a__Role."DataScope", a__Role."Status", a__Role."Remark", a__Role."CreateTime", a__Role."UpdateTime" 
+FROM "sys_user_role" a 
+LEFT JOIN "sys_role" a__Role ON a__Role."Id" = a."RoleId" 
+WHERE (a."UserId" = 1)
+2026-03-28 09:22:47.426 +08:00 [INF] SQL: UPDATE "sys_user" SET "LastLoginTime" = @p_0 
+WHERE ("Id" = 1)
+2026-03-28 09:22:47.429 +08:00 [INF] Executing ObjectResult, writing value of type 'CWHT.OA.Application.DTOs.ApiResponse`1[[CWHT.OA.Application.DTOs.Auth.LoginOutput, CWHT.OA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-28 09:22:47.430 +08:00 [INF] Executed action CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI) in 7.1634ms
+2026-03-28 09:22:47.430 +08:00 [INF] Executed endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-28 09:22:47.430 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 7.576ms
+2026-03-28 09:22:47.657 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/user/list?page=1&pageSize=10 - null null
+2026-03-28 09:22:47.657 +08:00 [INF] Executing endpoint 'CWHT.OA.WebAPI.Controllers.UserController.GetList (CWHT.OA.WebAPI)'
+2026-03-28 09:22:47.664 +08:00 [INF] Route matched with {action = "GetList", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[CWHT.OA.Application.DTOs.ApiResponse`1[CWHT.OA.Application.DTOs.PagedResult`1[CWHT.OA.WebAPI.Controllers.UserListItem]]] GetList(CWHT.OA.Application.DTOs.PagedInput) on controller CWHT.OA.WebAPI.Controllers.UserController (CWHT.OA.WebAPI).
+2026-03-28 09:22:47.672 +08:00 [INF] SQL: SELECT count(1) as1 
+FROM "sys_user" a 
+WHERE (a."IsDeleted" = 0)
+2026-03-28 09:22:47.694 +08:00 [INF] SQL: SELECT a."Id" as1, a."Username" as2, a."RealName" as3, a."Phone" as4, a."Email" as5, a."Avatar" as6, a."Gender" as7, a."Status" as8, a."DepartmentId" as9, a__Department."Name" as10, a."PositionId" as11, a__Position."Name" as12, a."CreateTime" as13 
+FROM "sys_user" a 
+LEFT JOIN "sys_department" a__Department ON a__Department."Id" = a."DepartmentId" 
+LEFT JOIN "sys_position" a__Position ON a__Position."Id" = a."PositionId" 
+WHERE (a."IsDeleted" = 0) 
+ORDER BY a."CreateTime" DESC 
+limit 10
+2026-03-28 09:22:47.705 +08:00 [INF] Executing ObjectResult, writing value of type 'CWHT.OA.Application.DTOs.ApiResponse`1[[CWHT.OA.Application.DTOs.PagedResult`1[[CWHT.OA.WebAPI.Controllers.UserListItem, CWHT.OA.WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], CWHT.OA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-28 09:22:47.709 +08:00 [INF] Executed action CWHT.OA.WebAPI.Controllers.UserController.GetList (CWHT.OA.WebAPI) in 44.9327ms
+2026-03-28 09:22:47.709 +08:00 [INF] Executed endpoint 'CWHT.OA.WebAPI.Controllers.UserController.GetList (CWHT.OA.WebAPI)'
+2026-03-28 09:22:47.709 +08:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/user/list?page=1&pageSize=10 - 200 null application/json; charset=utf-8 52.0732ms
+2026-03-28 09:24:35.678 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/api/auth/login - application/json 42
+2026-03-28 09:24:35.681 +08:00 [INF] CORS policy execution successful.
+2026-03-28 09:24:35.681 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-28 09:24:35.681 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-28 09:24:35.681 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/api/auth/login - 404 0 null 3.3945ms
+2026-03-28 09:24:35.682 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/api/api/auth/login, Response status code: 404
+2026-03-28 09:24:38.266 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/api/auth/login - application/json 42
+2026-03-28 09:24:38.267 +08:00 [INF] CORS policy execution successful.
+2026-03-28 09:24:38.267 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-28 09:24:38.267 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-28 09:24:38.267 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/api/auth/login - 404 0 null 0.6021ms
+2026-03-28 09:24:38.267 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/api/api/auth/login, Response status code: 404
+2026-03-28 09:24:39.491 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/api/auth/login - application/json 42
+2026-03-28 09:24:39.491 +08:00 [INF] CORS policy execution successful.
+2026-03-28 09:24:39.491 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-28 09:24:39.491 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-28 09:24:39.491 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/api/auth/login - 404 0 null 0.4649ms
+2026-03-28 09:24:39.491 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/api/api/auth/login, Response status code: 404
+2026-03-28 09:24:44.074 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/api/auth/login - application/json 42
+2026-03-28 09:24:44.074 +08:00 [INF] CORS policy execution successful.
+2026-03-28 09:24:44.075 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-28 09:24:44.075 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-28 09:24:44.075 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/api/auth/login - 404 0 null 0.615ms
+2026-03-28 09:24:44.075 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/api/api/auth/login, Response status code: 404
+2026-03-28 09:24:58.724 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 42
+2026-03-28 09:24:58.724 +08:00 [INF] Executing endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-28 09:24:58.724 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[CWHT.OA.Application.DTOs.ApiResponse`1[CWHT.OA.Application.DTOs.Auth.LoginOutput]] Login(CWHT.OA.Application.DTOs.Auth.LoginInput) on controller CWHT.OA.WebAPI.Controllers.AuthController (CWHT.OA.WebAPI).
+2026-03-28 09:24:58.725 +08:00 [INF] SQL: SELECT a."Id", a."Username", a."Password", a."Salt", a."RealName", a."Phone", a."Email", a."Avatar", a."Gender", a."Status", a."DepartmentId", a."PositionId", a."IsAdmin", a."LastLoginTime", a."LastLoginIp", a."CreateTime", a."UpdateTime", a."CreateBy", a."UpdateBy", a."IsDeleted", 
+a__Department."Id" as21, a__Department."Name", a__Department."ParentId", a__Department."Ancestors", a__Department."Sort", a__Department."Leader", a__Department."Phone" as27, a__Department."Email" as28, a__Department."Status" as29, a__Department."CreateTime" as30, a__Department."UpdateTime" as31 
+FROM "sys_user" a 
+LEFT JOIN "sys_department" a__Department ON a__Department."Id" = a."DepartmentId" 
+WHERE (a."Username" = 'admin' AND a."IsDeleted" = 0) 
+limit 1
+2026-03-28 09:24:58.726 +08:00 [INF] SQL: SELECT a."Id", a."UserId", a."RoleId", 
+a__Role."Id" as4, a__Role."Name", a__Role."Code", a__Role."Sort", a__Role."DataScope", a__Role."Status", a__Role."Remark", a__Role."CreateTime", a__Role."UpdateTime" 
+FROM "sys_user_role" a 
+LEFT JOIN "sys_role" a__Role ON a__Role."Id" = a."RoleId" 
+WHERE (a."UserId" = 1)
+2026-03-28 09:24:58.727 +08:00 [INF] SQL: UPDATE "sys_user" SET "LastLoginTime" = @p_0 
+WHERE ("Id" = 1)
+2026-03-28 09:24:58.729 +08:00 [INF] Executing ObjectResult, writing value of type 'CWHT.OA.Application.DTOs.ApiResponse`1[[CWHT.OA.Application.DTOs.Auth.LoginOutput, CWHT.OA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-28 09:24:58.729 +08:00 [INF] Executed action CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI) in 4.8072ms
+2026-03-28 09:24:58.729 +08:00 [INF] Executed endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-28 09:24:58.729 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 5.124ms
+2026-03-28 09:26:59.348 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/api/auth/login - application/json 42
+2026-03-28 09:26:59.348 +08:00 [INF] CORS policy execution successful.
+2026-03-28 09:26:59.348 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-28 09:26:59.348 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-28 09:26:59.348 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/api/auth/login - 404 0 null 0.6546ms
+2026-03-28 09:26:59.348 +08:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5000/api/api/auth/login, Response status code: 404
+2026-03-28 09:27:03.970 +08:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/auth/login - application/json 42
+2026-03-28 09:27:03.970 +08:00 [INF] CORS policy execution successful.
+2026-03-28 09:27:03.970 +08:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-03-28 09:27:03.970 +08:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-03-28 09:27:03.970 +08:00 [INF] Executing endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-28 09:27:03.971 +08:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[CWHT.OA.Application.DTOs.ApiResponse`1[CWHT.OA.Application.DTOs.Auth.LoginOutput]] Login(CWHT.OA.Application.DTOs.Auth.LoginInput) on controller CWHT.OA.WebAPI.Controllers.AuthController (CWHT.OA.WebAPI).
+2026-03-28 09:27:03.971 +08:00 [INF] SQL: SELECT a."Id", a."Username", a."Password", a."Salt", a."RealName", a."Phone", a."Email", a."Avatar", a."Gender", a."Status", a."DepartmentId", a."PositionId", a."IsAdmin", a."LastLoginTime", a."LastLoginIp", a."CreateTime", a."UpdateTime", a."CreateBy", a."UpdateBy", a."IsDeleted", 
+a__Department."Id" as21, a__Department."Name", a__Department."ParentId", a__Department."Ancestors", a__Department."Sort", a__Department."Leader", a__Department."Phone" as27, a__Department."Email" as28, a__Department."Status" as29, a__Department."CreateTime" as30, a__Department."UpdateTime" as31 
+FROM "sys_user" a 
+LEFT JOIN "sys_department" a__Department ON a__Department."Id" = a."DepartmentId" 
+WHERE (a."Username" = 'admin' AND a."IsDeleted" = 0) 
+limit 1
+2026-03-28 09:27:03.973 +08:00 [INF] SQL: SELECT a."Id", a."UserId", a."RoleId", 
+a__Role."Id" as4, a__Role."Name", a__Role."Code", a__Role."Sort", a__Role."DataScope", a__Role."Status", a__Role."Remark", a__Role."CreateTime", a__Role."UpdateTime" 
+FROM "sys_user_role" a 
+LEFT JOIN "sys_role" a__Role ON a__Role."Id" = a."RoleId" 
+WHERE (a."UserId" = 1)
+2026-03-28 09:27:03.974 +08:00 [INF] SQL: UPDATE "sys_user" SET "LastLoginTime" = @p_0 
+WHERE ("Id" = 1)
+2026-03-28 09:27:03.977 +08:00 [INF] Executing ObjectResult, writing value of type 'CWHT.OA.Application.DTOs.ApiResponse`1[[CWHT.OA.Application.DTOs.Auth.LoginOutput, CWHT.OA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-03-28 09:27:03.977 +08:00 [INF] Executed action CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI) in 6.823ms
+2026-03-28 09:27:03.977 +08:00 [INF] Executed endpoint 'CWHT.OA.WebAPI.Controllers.AuthController.Login (CWHT.OA.WebAPI)'
+2026-03-28 09:27:03.978 +08:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/auth/login - 200 null application/json; charset=utf-8 7.538ms
